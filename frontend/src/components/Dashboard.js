@@ -1,7 +1,7 @@
 import React, { useState,useEffect, useContext} from 'react';
 import axios from 'axios';
 import jwt_decode from "jwt-decode";
-import { UserContext } from '../context/User';
+import UserContext from '../context/User';
 import { useNavigate } from 'react-router-dom';
 
 const Dashboard = () => {
@@ -32,8 +32,8 @@ const Dashboard = () => {
       setId(decoded.idPeminjam);
       setExpiredToken(decoded.exp);
 
-      // setUser({name:decoded.name, email:decoded.email,npm:decoded.npm,denda:decoded.denda});
-      setUser(decoded.npm);
+      setUser({...user, id:decoded.idPeminjam, name:decoded.name, email:decoded.email,npm:decoded.npm,denda:decoded.denda});
+      // setUser(decoded.npm);
 
     } catch(error){
       if(error.response){ //a
@@ -54,7 +54,8 @@ const Dashboard = () => {
       setName(decoded.name);
       setId(decoded.idPeminjam);
       setExpiredToken(decoded.exp); 
-      setUser(decoded.idPeminjam);
+      // setUser({...user, id:decoded.idPeminjam, name:decoded.name, email:decoded.email,npm:decoded.npm,denda:decoded.denda});
+      // setUser(decoded.idPeminjam);
     }
     return config;
   },(error) => {
@@ -108,7 +109,7 @@ const Dashboard = () => {
   return (
     <section>
           <div className='container mt-5'>
-            <h1 className="title is-5 m-4">Welcome Back to E-Lab, {name}, id:{user} </h1>
+            <h1 className="title is-5 m-4">Welcome Back to E-Lab, {user.name}, id: {user.id} </h1>
           </div>
           <div className='container mt-5'>
             <div className="columns is-multiline">

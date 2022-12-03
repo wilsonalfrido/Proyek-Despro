@@ -1,5 +1,5 @@
 import React, { useState,useEffect, useContext }  from 'react'
-import { UserContext } from '../context/User';
+import UserContext from '../context/User';
 
 
 
@@ -20,10 +20,10 @@ const History = () => {
               </figure>
             </div>
           <div className='column is-two-third is-vcentered m-5'>
-            <h3 class="user-name is-size-4 has-text-weight-semibold">{user}</h3>
-            <h3 class="user-npm is-size-4 has-text-weight-semibold ">1906299843</h3>
-            <h3 class="user-email is-size-4 has-text-weight-semibold">gerygirsang@gmail.com</h3>
-            <h3 class="is-size-4 has-text-weight-semibold">Denda Tersisa: <span class="user-fine">Rp.0</span></h3> 
+            <h3 class="user-name is-size-4 has-text-weight-semibold">{user.name}</h3>
+            <h3 class="user-npm is-size-4 has-text-weight-semibold ">{user.npm}</h3>
+            <h3 class="user-email is-size-4 has-text-weight-semibold">{user.email}</h3>
+            <h3 class="is-size-4 has-text-weight-semibold">Denda Tersisa: <span class="user-fine">Rp.{user.denda}</span></h3> 
           </div>
         </div>
         <h2 className='is-size-4 has-text-weight-semibold mb-4'>My History</h2>

@@ -7,17 +7,18 @@ import Dashboard from "./components/Dashboard";
 import ProductList from "./components/ProductList"
 import Booking from "./components/Booking";
 import History from "./components/History";
-import { UserContext } from "./context/User";
+import { UserProvider } from "./context/User";
 
 function App() {
-  const [user,setUser] = useState(null);
-  const providerValue = useMemo(()=>({user,setUser}),[user,setUser]);
+  // const [user,setUser] = useState(null);
+  // const providerValue = useMemo(()=>({user,setUser}),[user,setUser]);
 
 
 
   return (
-    <BrowserRouter>
-      <UserContext.Provider value = {{user,setUser}}>
+    <UserProvider>
+      <BrowserRouter>
+      
         <Routes>
           <Route exact path="/" element={<Login/>}/>
           <Route exact path="/register" element={<Register/>}/>
@@ -27,8 +28,9 @@ function App() {
           <Route exact path="/history" element={
             [<Navbar/>,<History/>]}/>
         </Routes>
-      </UserContext.Provider>
-    </BrowserRouter>
+      
+      </BrowserRouter>
+    </UserProvider>
   );
 }
 
