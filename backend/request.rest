@@ -1,0 +1,27 @@
+GET http://localhost:5000/peminjam
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFBlbWluamFtIjo3LCJuYW1lXyI6ImF4IiwiZW1haWxfIjoiYXhzQGdtYWlsLmNvbSIsImlhdCI6MTY2OTAwOTk4NCwiZXhwIjoxNjY5MDEwMDA0fQ.FHuv2zUCDyYkVH5SkAnNkGoMKkxR0r35SeU1tY3ONNo
+
+###
+POST http://localhost:5000/peminjam
+Content-Type: application/json
+
+
+{
+    "name": "axa",
+    "email" : "axa@gmail.com",
+    "password": "1",
+    "confPassword" : "1"
+}
+
+
+###
+POST http://localhost:5000/login
+Content-Type: : application/json
+
+{
+    "email":"axa@gmail.com",
+    "password": "1"
+
+}
+
+###
