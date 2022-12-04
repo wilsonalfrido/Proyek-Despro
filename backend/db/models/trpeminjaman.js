@@ -20,7 +20,11 @@ module.exports = (sequelize, DataTypes) => {
     qrcode: DataTypes.STRING,
     id_alat: DataTypes.INTEGER,
     status: DataTypes.INTEGER,
-    url_qr_code: DataTypes.STRING
+    url_qr_code: DataTypes.STRING,
+    waktu_diambil: DataTypes.DATE,
+    waktu_dikembalikan: DataTypes.DATE,
+    denda: DataTypes.INTEGER
+
   }, {
     sequelize,
     modelName: 'trpeminjaman',
