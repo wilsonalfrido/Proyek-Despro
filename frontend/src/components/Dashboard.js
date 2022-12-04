@@ -109,7 +109,7 @@ const Dashboard = () => {
   return (
     <section>
           <div className='container mt-5'>
-            <h1 className="title is-5 m-4">Welcome Back to E-Lab, {user.name}, id: {user.id} </h1>
+            <h1 className="title is-5 m-4">Welcome Back to E-Lab, {user.name} </h1>
           </div>
           <div className='container mt-5'>
             <div className="columns is-multiline">

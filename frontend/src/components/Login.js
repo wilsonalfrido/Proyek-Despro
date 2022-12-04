@@ -30,7 +30,9 @@ const Login = () => {
         <div className="container">
             <div className='columns is-centered'>
                 <div className='column is-4-desktop'>
+                    
                     <form onSubmit={Login} className='box'>
+                    <h1 className='has-text-centered is-size-2 has-text-weight-semibold'>Welcome to E-LAB</h1>
                         <p className='has-text-centered'>{msg}</p>
                         <div className="field mt-5">
                             <label className="label">Email or username</label>
@@ -52,7 +54,7 @@ const Login = () => {
                         <p className='has-text-centered'>Not a member yet? <span onClick={(e)=>{
                             e.preventDefault();
                             navigate("/register");
-                        }} className='has-text-link-dark is-underlined'><a>Register Here</a></span></p>
+                        }} className='has-text-link-dark is-underlined'><a className = "has-text-weight-bold">Register Here</a></span></p>
                         
                     </form>
                 </div>

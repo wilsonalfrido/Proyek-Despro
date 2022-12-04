@@ -19,7 +19,7 @@ const Navbar = () => {
 
 
   return (
-    <nav class="navbar is-info" role="navigation" aria-label="main navigation">
+    <nav class="navbar is-info is-fixed-top" role="navigation" aria-label="main navigation">
       <div className="container">
         <div class="navbar-brand">
             <a class="navbar-item" href="https://bulma.io">
@@ -42,7 +42,10 @@ const Navbar = () => {
                 Booking
             </a>
         
-            <a class="navbar-item">
+            <a onClick={(e)=>{
+                e.preventDefault();
+                navigate("/rules");
+            }} class="navbar-item">
                 Rules
             </a>
 

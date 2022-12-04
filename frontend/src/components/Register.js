@@ -70,6 +70,10 @@ const Register = () => {
                         <div className="field mt-5">
                             <button className="button is-success is-fullwidth">Register</button>
                         </div>
+                        <p className='has-text-centered'>Already a member ? <span onClick={(e)=>{
+                            e.preventDefault();
+                            navigate("/");
+                        }} className='has-text-link-dark is-underlined'><a className = "has-text-weight-bold">Login Here</a></span></p>
                     </form>
                 </div>
             </div>
