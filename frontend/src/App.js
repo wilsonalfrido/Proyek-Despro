@@ -7,6 +7,7 @@ import Dashboard from "./components/Dashboard";
 import ProductList from "./components/ProductList"
 import Booking from "./components/Booking";
 import History from "./components/History";
+import Rules from "./components/Rules";
 import { UserProvider } from "./context/User";
 
 function App() {
@@ -27,6 +28,8 @@ function App() {
           <Route exact path="/booking" element={[<Navbar/>,<Booking/>]}></Route>
           <Route exact path="/history" element={
             [<Navbar/>,<History/>]}/>
+          <Route exact path="/rules" element={
+            [<Navbar/>,<Rules/>]}/>
         </Routes>
       
       </BrowserRouter>
