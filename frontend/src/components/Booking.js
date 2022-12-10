@@ -93,7 +93,7 @@ const Booking = () => {
                                 </div>}
                         <p>Ketentuan Peminjaman Dapat Dilihat Pada Tab <span onClick={(e)=>{
                             e.preventDefault();
-                            navigate("/dashboard");
+                            navigate("/rules");
                         }}><a className = "has-text-weight-bold">Rules</a></span></p>
                     </form>
                 </div>
