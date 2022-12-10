@@ -11,7 +11,7 @@ module.exports = {
      */
      return Promise.all([
       queryInterface.addColumn(
-        'mspeminjams',
+        'msPeminjams',
         'npm',
         {
           type: Sequelize.STRING,
@@ -19,7 +19,7 @@ module.exports = {
         },
       ),
       queryInterface.addColumn(
-        'mspeminjams',
+        'msPeminjams',
         'denda',
         {
           type: Sequelize.INTEGER,
@@ -37,8 +37,8 @@ module.exports = {
      * await queryInterface.dropTable('users');
      */
      return Promise.all([
-      queryInterface.removeColumn('mspeminjams','npm'),
-      queryInterface.removeColumn('mspeminjams','denda')
+      queryInterface.removeColumn('msPeminjams','npm'),
+      queryInterface.removeColumn('msPeminjams','denda')
     ])
   }
 };
